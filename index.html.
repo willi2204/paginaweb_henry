@@ -2,25 +2,129 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Primera Página Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry | Portafolio Creativo</title>
     <style>
-        /* Aquí le damos un poco de estilo */
-        body { font-family: sans-serif; text-align: center; background-color: #f0f8ff; }
-        h1 { color: #333; }
-        .boton { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        /* Variables de color para elegancia */
+        :root {
+            --primario: #6c5ce7;
+            --secundario: #a29bfe;
+            --oscuro: #2d3436;
+            --texto: #dfe6e9;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--texto);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Barra de navegación */
+        nav {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secundario);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Contenedor principal */
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, var(--secundario));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        /* Botones elegantes */
+        .btn-principal {
+            background: var(--primario);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s all ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        .btn-principal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.6);
+            background: var(--secundario);
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.5;
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>¡Hola, bienvenido a mi página web!</h1>
-    <p>Este es mi primer proyecto después de intentar la calculadora.</p>
-    
-    <button class="boton" onclick="saludar()">Haz clic aquí</button>
+    <nav>
+        <div class="logo">Henry Dev</div>
+    </nav>
+
+    <section class="hero">
+        <div class="glass-card">
+            <h1>Bienvenido</h1>
+            <p>Explora un mundo de diseño y código. Esta es mi nueva plataforma digital creada con pasión y elegancia.</p>
+            <a href="#" class="btn-principal" onclick="saludar()">Explorar Proyecto</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Henry - Desarrollador Web
+    </footer>
 
     <script>
-        // Esto es JavaScript, hace que la página sea interactiva
         function saludar() {
-            alert("¡Funciona! Estás creando una web.");
+            alert("¡Bienvenido a la experiencia elegante! Tu web está funcionando perfectamente.");
         }
     </script>
 
