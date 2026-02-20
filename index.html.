@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Primera Página Web</title>
+    <style>
+        /* Aquí le damos un poco de estilo */
+        body { font-family: sans-serif; text-align: center; background-color: #f0f8ff; }
+        h1 { color: #333; }
+        .boton { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>¡Hola, bienvenido a mi página web!</h1>
+    <p>Este es mi primer proyecto después de intentar la calculadora.</p>
+    
+    <button class="boton" onclick="saludar()">Haz clic aquí</button>
+
+    <script>
+        // Esto es JavaScript, hace que la página sea interactiva
+        function saludar() {
+            alert("¡Funciona! Estás creando una web.");
+        }
+    </script>
+
+</body>
+</html>
